@@ -1,0 +1,34 @@
+METODOLOGIA BEM
+
+una metodologia en css, permite la reutilizacion y evita que repitamos codigo 
+ se hace uso de la cascada para sobreescribir las propiedades que necesitemos 
+  
+tambien nos permite aÃ±adir una especificidad consistente en todo el proyecto
+
+aumenta la independencia de tu codigo
+
+la metodologia BEM se basa en 3 conceptos principales
+BLOQUES: es cualquier elemento autonomo que podemos reutilizar en cualquier parte de la paguina, ejemplos:menus,logos,
+galeria, una tarjeta, cualquier elemento que podamos utilizar en cualquier lugar de la pagina seria un BLOQUES
+
+como ejemplo de un logo, lo que nos sugiere BEM es que utilicemos clases que sean completamente independientes, que
+no esten ligadas a nada y que sean totalmente reutilizables, entonces en el caso de un logo deberiamos utilizar una
+clase llamada 'logo' y no clases como header-logo o topbarlogo, 'logo' no esta ligado a ningun sitio especifico del
+html, podriamos reutilizar este logo en cualquier sitio de la pagina y solo tenemos que ponerle la clase logo, este
+principio se aplica para cualquier cosa que querramos tener en nuestro sitio web y que sean reutilizables
+
+ELEMENTOS
+hay que pensar en las piezas que conforman nuestro bloques, para nombrar un elemento lo que hacemos es escribir el
+nombre del bloque al que pertenece, dos guiones bajos '__' y despues el nombre del que le querramos dar, son 2 guiones
+bajos es porque hay ciertas convenciones donde los espacios se representan con guiones bajos o con guiones medios, 
+entonces de esta forma evitamos confuciones con respecto si estamos usando BEM para nombrar un elemento o 
+simplemente son 2 palabras separadas por un espacio
+
+MODIFICADORES
+
+estos modifican algun tipo de estilo, se pueden aplicar tanto a bloques como a elementos, se escriben con 2 guiones
+medios en lugar de 2 guiones bajos. un ejemplo con las tarjetas, si tenemos un bloque que referencia a una tarjeta
+blanca con la clase 'card' se quedaria con esta clase y la tarjeta que este modificada para que sea azul tendria la
+clase 'card card--blue' le ponemos 2 clases porque la clase card va a tener los estilos por defecto y la clase
+card--blue va a tener los estilos que modificamos, si queremos aplicar un modificador sobre un elemento, los principios
+serian los mismos 
