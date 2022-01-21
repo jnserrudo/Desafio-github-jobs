@@ -1,1 +1,7 @@
+<<<<<<< HEAD
 En la carpeta assets estan las imagenes e iconos
+=======
+En la carpeta assets estan las imagenes e iconos
+
+prueba de pullrequest
+>>>>>>> master
