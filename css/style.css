@@ -328,6 +328,31 @@ margin-left: 1%;
     width: 4.5rem;
 }
 
+.cont_works__paginacion{
+    display: flex;
+    margin: 0 1.5rem;
+    padding: 0.5rem;
+    margin-bottom: 10px;
+    justify-content: center;
+}
+.cont_works__paginacion_pags{
+    margin: 0 0.5rem;
+    width: 4rem;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 1rem;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+.cont_works__paginacion_pags:hover{
+    border:1px solid var(--secundario);
+    box-shadow: 0 2px 4px rgba(0,0,0,.2);
+    transition: 0.3s ease;
+}
+
 .footer{
     margin-top: auto;
     text-align: center;
@@ -473,40 +498,31 @@ margin-left: 1%;
     }
 
 
-    /* PAGINACION MOBILEEEEEE------------------ */
+    /* PAGINACION ESCRITORIOOOOOOOOOOO------------------ */
 
-    .cont_works__paginacion{
+    /* .cont_works__paginacion{
         display: flex;
-        padding: 1rem;
-        border: 1px black solid;
+        margin: 0 1.5rem;
+        padding: 0.5rem;
         margin-bottom: 10px;
-
         justify-content: center;
     }
     .cont_works__paginacion_pags{
-        /* padding: 0 1.5rem;
-        height: 10px;
-        width: 10px;
-        border: 2px black solid;
-        height: 3.5rem;
+        margin: 0 0.5rem;
+        width: 4rem;
         border: 1px solid rgba(0,0,0,.2);
         border-radius: 1rem;
         cursor: pointer;
         justify-content: center;
-        align-items: center; */
-        height: 10px;
-        width: 10px;
-        border: 1px solid rgba(0,0,0,.2);
+        align-items: center;
+        text-align: center;
 
     }
-    /*
+    
     .cont_works__paginacion_pags:hover{
-        background: var(--secundario);
+        border:1px solid var(--secundario);
         box-shadow: 0 2px 4px rgba(0,0,0,.2);
-        transition: 0.3s;
-    }
-    .cont_works__paginacion_pags:not(first-child){
-        margin-right: 1.5rem;
+        transition: 0.3s ease;
     } */
 } 
 
