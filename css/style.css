@@ -588,6 +588,10 @@ margin-left: 1%;
 
 
 }
+.footer--dark{
+    background-color: var(--bgdark);
+    color: var(--blanco);
+}
 .cont_works--dark{
     background-color: var(--bgdark);
     color: var(--blanco);

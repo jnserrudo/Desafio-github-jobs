@@ -54,9 +54,21 @@ input.addEventListener('click',(e)=>{
 
     while(hijosmain.nextElementSibling){
         hijosmain=hijosmain.nextElementSibling
-      
+
+        const imgubi=document.createElement('img')
+        imgubi.setAttribute('src',"../assets/image/ubiwhite.svg")
+        const imgtiempo=document.createElement('img')
+        imgtiempo.setAttribute('src',"../assets/image/tiempo.svg")
+        // creo las imagenes para los fondos oscuros
+        imgubi.classList.add("cont_works__trabajo__info2__logo")
+        imgtiempo.classList.add("cont_works__trabajo__info2__logo")                                         
+
+        hijosmain.lastElementChild.replaceChild(imgubi,hijosmain.lastElementChild.children[0])
+        hijosmain.lastElementChild.replaceChild(imgtiempo,hijosmain.lastElementChild.children[2])
+    
         hijosmain.lastElementChild.classList.toggle('cont_works__trabajo__info2--dark')
 
+        console.log(hijosmain.firstElementChild.lastElementChild.lastElementChild)
         if(hijosmain.firstElementChild.lastElementChild.lastElementChild){
             hijosmain.firstElementChild.lastElementChild.lastElementChild.classList.toggle('cont_works__trabajo__info1__fulltime--dark')
         }
@@ -66,7 +78,7 @@ input.addEventListener('click',(e)=>{
 
     }
     // main.classList.toggle('cont_work--dark')
-    footer.classList.toggle('foooter--dark')
+    footer.classList.toggle('footer--dark')
      btnSwitch.classList.toggle('active');
      console.log(btnSwitch)
 });
