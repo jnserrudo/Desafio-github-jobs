@@ -51,7 +51,7 @@ img{
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 5%;
+    margin-bottom: 3%;
     /* border: 2px black solid; */
 }
 .header__titulo{
@@ -328,18 +328,20 @@ margin-left: 1%;
     width: 4.5rem;
 }
 
-.cont_works__paginacion{
+.paginacion{
     display: flex;
     margin: 0 1.5rem;
     padding: 0.5rem;
     margin-bottom: 10px;
-    justify-content: center;
+    justify-content: flex-end;
 }
-.cont_works__paginacion_pags{
+.paginacion_pags{
+    padding-top: 1.4%;
     margin: 0 0.5rem;
-    width: 4rem;
+    height: 3rem;
+    width: 3rem;
     border: 1px solid rgba(0,0,0,.2);
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     cursor: pointer;
     justify-content: center;
     align-items: center;
@@ -347,7 +349,7 @@ margin-left: 1%;
 
 }
 
-.cont_works__paginacion_pags:hover{
+.paginacion_pags:hover{
     border:1px solid var(--secundario);
     box-shadow: 0 2px 4px rgba(0,0,0,.2);
     transition: 0.3s ease;
@@ -363,25 +365,39 @@ margin-left: 1%;
 
 /*--------------- version escritorio-----------------------*/
 @media (min-width: 768px){
-    /* body{
+    body{
         display: grid;
         grid-template-columns: repeat(3,1fr);
-        grid-template-rows: 20% 80%;
-        grid-gap: 1rem;
+        grid-template-rows: auto 1fr auto auto;
+        grid-gap: 0.5rem;
         grid-template-areas: "header header header"
-                             "sidebar main main";
+                             "sidebar main main"
+                             "sidebar pagi pagi"
+                             "footer footer footer";
     }
     .header{
         grid-area: header;
+        /* border: 2px red solid; */
     }
     .aside_opciones{
         grid-area: sidebar;
+        /* border: 2px red solid; */
     }
     .cont_works{
         grid-area: main;
-    } */
+        /* border: 2px red solid; */
+    }
+    .paginacion{
+        grid-area: pagi;
+        /* border: 2px red solid; */
+    } 
+    .footer{
+        grid-area: footer;
+        /* border: 2px red solid; */
+    }
     
-    body{
+    
+    /* body{
         display: grid;
         grid-template-columns: repeat(3,1fr);
         grid-template-rows: 30% 60% 10%  ; 
@@ -393,21 +409,22 @@ margin-left: 1%;
     .header{
         grid-row: 1/2;
         grid-column: 1/4;
-        /* border: 2px red solid; */
     }
     .aside_opciones{
         grid-column: 1/2;
-    grid-row: 2/3;
-    /* border: 2px red solid; */
+        grid-row: 2/3;
     }
     .footer{
         grid-column:1/4;
     grid-row: 3/4;
-    /* border: 2px red solid; */
-    }
+    } */
 
 
 /* contenedor */
+    .header__titulo{
+        margin-top: 0;
+    }
+
     .header__cont_buscador{
         background-image: url("../assets/image/monumentoguemes.jpg");
         background-repeat: no-repeat; 
@@ -422,8 +439,6 @@ margin-left: 1%;
         justify-content: center;
         /* border: 2px black solid; */
         /* padding: 2% 8%; */
-    
-    
     }
     
     .header__buscador{
@@ -500,14 +515,14 @@ margin-left: 1%;
 
     /* PAGINACION ESCRITORIOOOOOOOOOOO------------------ */
 
-    /* .cont_works__paginacion{
+    /* .paginacion{
         display: flex;
         margin: 0 1.5rem;
         padding: 0.5rem;
         margin-bottom: 10px;
         justify-content: center;
     }
-    .cont_works__paginacion_pags{
+    .paginacion_pags{
         margin: 0 0.5rem;
         width: 4rem;
         border: 1px solid rgba(0,0,0,.2);
@@ -519,11 +534,11 @@ margin-left: 1%;
 
     }
     
-    .cont_works__paginacion_pags:hover{
+    .paginacion_pags:hover{
         border:1px solid var(--secundario);
         box-shadow: 0 2px 4px rgba(0,0,0,.2);
         transition: 0.3s ease;
-    } */
+    }*/
 } 
 
 
