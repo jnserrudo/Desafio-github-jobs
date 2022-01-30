@@ -6,21 +6,21 @@ const main=document.getElementById('main')
 const footer=document.getElementById('footer')
 
 
-console.log(input)
-console.log(input.checked)
-input.addEventListener('click',(e)=>{
-    e.preventDefault
-    console.log(e.target)
-    setTimeout(()=>{
-        input.checked ? input.checked=false:input.checked=true
+// console.log(input)
+// console.log(input.checked)
+// input.addEventListener('click',(e)=>{
+//     e.preventDefault
+//     console.log(e.target)
+//     setTimeout(()=>{
+//         input.checked ? input.checked=false:input.checked=true
 
-    },10)
-    // input.checked ? input.checked=false:input.checked=true
-    // if(input.checked){
-    //     input.checked=false
-    // }
-    console.log(input.checked)
-})
+//     },10)
+//     // input.checked ? input.checked=false:input.checked=true
+//     // if(input.checked){
+//     //     input.checked=false
+//     // }
+//     console.log(input.checked)
+// })
 
 /* dm */
  const btnSwitch = document.getElementById('switch');
@@ -73,12 +73,12 @@ input.addEventListener('click',(e)=>{
             hijosmain.firstElementChild.lastElementChild.lastElementChild.classList.toggle('cont_works__trabajo__info1__fulltime--dark')
         }
         // console.log(hijosmain.firstElementChild.lastElementChild.lastElementChild.classList.toggle('cont_works__trabajo__info1__fulltime--dark'))
-        console.log(hijosmain)
+        // console.log(hijosmain)
         hijosmain.classList.toggle('cont_works--dark')
 
     }
     // main.classList.toggle('cont_work--dark')
     footer.classList.toggle('footer--dark')
      btnSwitch.classList.toggle('active');
-     console.log(btnSwitch)
+    //  console.log(btnSwitch)
 });
