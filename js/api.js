@@ -85,9 +85,9 @@ const loadpage = async () => {
     // --------------------------------------------------------------------------------
 
     console.log(window.location.href)
-    console.log(location.origin)
+    console.log(location)
     const titulo = document.createElement("a")
-    let url = new URL(location.origin+'/html/descripcion.html')
+    let url = new URL(location.href.replace('index','descripcion'))
     url.searchParams.set('id',work.id)
     titulo.href = url;
     titulo.classList.add('cont_works__trabajo__info1__texto__cargo')
@@ -211,7 +211,7 @@ const buscador = async (x) => {
 //   // parrafo con el cargo
     // --------------------------------------------------------------------------------
     const titulo = document.createElement("a")
-    let url = new URL(location.origin+'/html/descripcion.html')
+    let url = new URL(location.href.replace('index','descripcion'))
     url.searchParams.set('id',work.id)
     titulo.href = url;
     titulo.classList.add('cont_works__trabajo__info1__texto__cargo')
@@ -353,7 +353,7 @@ const trabajosfulltime = async (x) => {
 //   // parrafo con el cargo
     // --------------------------------------------------------------------------------
     const titulo = document.createElement("a")
-    let url = new URL(location.origin+'/html/descripcion.html')
+    let url = new URL(location.href.replace('index','descripcion'))
     url.searchParams.set('id',work.id)
     titulo.href = url;
     titulo.classList.add('cont_works__trabajo__info1__texto__cargo')
@@ -571,7 +571,7 @@ const queryubicaciones = async (ubi, nom) => {
 //   // parrafo con el cargo
     // --------------------------------------------------------------------------------
     const titulo = document.createElement("a")
-    let url = new URL(location.origin+'/html/descripcion.html')
+    let url = new URL(location.href.replace('index','descripcion'))
     url.searchParams.set('id',work.id)
     titulo.href = url;
     titulo.classList.add('cont_works__trabajo__info1__texto__cargo')
