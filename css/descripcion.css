@@ -1,0 +1,190 @@
+:root{
+    --blanco: #ffffff;
+    --negro: #000000;
+    --primario: #a94e32;
+    --secundario:#0c89f2;
+    --grisClaro: rgba(0,0,0,.3);
+    --azulOscuro:#030973;
+    --bg: #f9f9f9;
+
+    --bgdark: #121212;
+    --terciario:#222222;
+    --azulDM: #228ecc;
+    --blancoDM: #f9f9f9;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    margin: 0;
+    padding: 1rem;
+    font-family: 'Dongle', sans-serif;
+    background-color: var(--bg)
+}
+
+/*------------------ HEADER---------------------*/
+.header{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 3.5rem;
+    font-weight: 400;
+    color: var(--terciario);
+}
+.header--negrita{
+    font-weight: 700;
+}
+
+/*----------------- ASIDE ----------------*/
+
+.aside_opciones__info__back{
+    display: flex;
+}
+.aside_opciones__info__back__logo{
+    margin-right: 2%;
+    margin-top: 0.6rem;
+    fill: var(--azulDM);
+}
+.aside_opciones__info__back__link{
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: var(--azulDM);
+}
+.aside_opciones__info__tit{
+    color: var(--grisClaro);
+    text-transform: uppercase;
+}
+.aside_opciones__info__txt{
+    color: rgb(89, 76, 170);
+}
+
+/*----------------- MAIN -----------------*/
+.cont_works{
+    padding: 1.1rem 0;
+}
+
+.cont_works__trabajo_info__time{
+    display: flex;
+    align-items: center;
+    color: var(--grisClaro);
+    fill: var(--grisClaro);
+}
+.cont_works__trabajo_info__time__txt{
+    margin: 0.2rem 0 0 0.5rem;
+}
+
+.cont_works__trabajo_info__LNyUbi{
+    padding: 1.1rem 0;
+    display: flex;
+    gap: 1rem;
+}
+.cont_works__trabajo_info__LNyUbi__logo{
+    border: none;
+    border-radius: 10%;
+    background-attachment: fixed;
+    width: 6rem;
+    height: 6rem;
+}
+.cont_works__trabajo_info__LNyUbi__cont{
+    font-size: 1rem;
+    color: var(--grisClaro);
+    fill: var(--grisClaro);
+}
+.cont_works__trabajo_info__LNyUbi__cont__nomempresa{
+    font-size: 1.8rem;
+    color: var(--azulOscuro);
+}
+.cont_works__trabajo_info__LNyUbi__cont__ubi{
+    display: flex;
+}
+
+.descripcion{
+    font-size: 1.1rem;
+    color: rgb(89, 76, 170);
+}
+
+.cont_works__trabajo_info__CyFt{
+    display: flex;
+    align-items: center;
+}
+.cont_works__trabajo_info__CyFt__cargo{
+    font-size: 2rem;
+    color: var(--azulOscuro);
+}
+.cont_works__trabajo_info__CyFt__fulltime{
+    margin-left: 2%;
+    color: var(--azulOscuro);
+    border: 1px solid var(--azulOscuro);
+    border-radius: 5px;
+    text-align: center;
+    max-width: 20%;
+}
+.cont_works__trabajo_info__CyFt__fulltime__txt{
+    margin: 0 0.5rem;
+}
+
+.footer{
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(89, 76, 170);
+}
+/* ------------------------ V. ESCRITORIO ------------------------*/
+@media (min-width: 768px){
+    
+    body{
+        display: grid;
+        grid-template-columns: 20% 1fr;
+        grid-template-rows: 9rem 1fr 6rem;
+        grid-template-areas: "header header"
+                             "sidebar main"
+                             "footer footer";
+        column-gap: 5rem;
+    }
+
+    /*------------------- HEADER -----------------------*/
+    .header{
+        grid-area: header;
+        margin: 0;
+    }
+
+    /*--------------------- SIDEBAR -----------------------*/
+    .aside_opciones{
+        grid-area: sidebar;
+        font-size: 1.5rem;
+    }
+    .aside_opciones__info__back__link{
+        font-size: 1.8rem;
+    }
+    /*---------------------- FOOTER -----------------------*/
+    .footer{
+        grid-area: footer;
+        font-size: 1.5rem;
+    }
+
+    /*----------------------- MAIN ------------------------*/
+    .cont_works{
+        grid-area: main;
+        padding: 0;
+        font-size: 1.8rem;
+    }
+    .cont_works__trabajo_info__CyFt__cargo,
+    .cont_works__trabajo_info__LNyUbi__cont__nomempresa{
+        font-size: 2.5rem;
+    }
+    .cont_works__trabajo_info__LNyUbi__cont__ubi{
+        font-size: 1.8rem;
+    }
+    .cont_works__trabajo_info__LNyUbi__cont__ubi__logo{
+        margin-top: 0.6rem;
+        margin-right: 0.3rem;
+    }
+    .descripcion{
+        margin-top: 1.5rem;
+        font-size: 1.8rem;
+    }
+}
