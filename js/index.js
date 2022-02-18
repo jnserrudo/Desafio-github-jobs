@@ -36,15 +36,15 @@ const pagi = document.getElementsByClassName('paginacion_pags')
     const imgtiempo=document.createElement('img')
     if(m){
         if(modo==0){
-            imgubi.setAttribute('src',"assets/image/ubiwhite.svg")
-            imgtiempo.setAttribute('src',"assets/image/tiempowhite.svg")
+            imgubi.setAttribute('src',"../assets/image/ubiwhite.svg")
+            imgtiempo.setAttribute('src',"../assets/image/tiempowhite.svg")
             // creo las imagenes para los fondos oscuros
             imgubi.classList.toggle("cont_works__trabajo__info2__logo")
             imgtiempo.classList.toggle("cont_works__trabajo__info2__logo")  
         }
         else{
-            imgubi.setAttribute('src',"assets/image/ubi.svg")
-            imgtiempo.setAttribute('src',"assets/image/tiempo.svg")
+            imgubi.setAttribute('src',"../assets/image/ubi.svg")
+            imgtiempo.setAttribute('src',"../assets/image/tiempo.svg")
             // creo las imagenes para los fondos oscuros
             imgubi.classList.toggle("cont_works__trabajo__info2__logo")
             imgtiempo.classList.toggle("cont_works__trabajo__info2__logo")
@@ -54,11 +54,11 @@ const pagi = document.getElementsByClassName('paginacion_pags')
         // const imgtiempo=document.createElement('img');  
     
         // if(body.className==='dark'){
-        //     imgubi.setAttribute('src',"assets/image/ubiwhite.svg")
-        //     imgtiempo.setAttribute('src',"assets/image/tiempowhite.svg") 
+        //     imgubi.setAttribute('src',"../assets/image/ubiwhite.svg")
+        //     imgtiempo.setAttribute('src',"../assets/image/tiempowhite.svg") 
         // }else{
-        //     imgubi.setAttribute("src", "assets/image/ubi.svg")
-        //     imgtiempo.setAttribute("src", "assets/image/tiempo.svg");
+        //     imgubi.setAttribute("src", "../assets/image/ubi.svg")
+        //     imgtiempo.setAttribute("src", "../assets/image/tiempo.svg");
         // }
         
         // // creo las imagenes para los fondos oscuros
@@ -107,15 +107,15 @@ const pagi = document.getElementsByClassName('paginacion_pags')
             const imgtiempo=document.createElement('img')
             if(m){
             if(modo==0){
-                imgubi.setAttribute('src',"assets/image/ubiwhite.svg")
-                imgtiempo.setAttribute('src',"assets/image/tiempowhite.svg")
+                imgubi.setAttribute('src',"../assets/image/ubiwhite.svg")
+                imgtiempo.setAttribute('src',"../assets/image/tiempowhite.svg")
                 // creo las imagenes para los fondos oscuros
                 imgubi.classList.toggle("cont_works__trabajo__info2__logo")
                 imgtiempo.classList.toggle("cont_works__trabajo__info2__logo")  
             }
             else{
-                imgubi.setAttribute('src',"assets/image/ubi.svg")
-                imgtiempo.setAttribute('src',"assets/image/tiempo.svg")
+                imgubi.setAttribute('src',"../assets/image/ubi.svg")
+                imgtiempo.setAttribute('src',"../assets/image/tiempo.svg")
                 // creo las imagenes para los fondos oscuros
                 imgubi.classList.toggle("cont_works__trabajo__info2__logo")
                 imgtiempo.classList.toggle("cont_works__trabajo__info2__logo")
