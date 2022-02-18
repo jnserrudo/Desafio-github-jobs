@@ -183,10 +183,10 @@ const loadpage = async (x,y) => {
       const imgubicacion = document.createElement("img");
       imgubicacion.classList.add("cont_works__trabajo__info2__logo");
       if(modo==0){
-        imgubicacion.setAttribute("src", "../assets/image/ubiblack.svg");
+        imgubicacion.setAttribute("src", "assets/image/ubiblack.svg");
 
       }else{
-        imgubicacion.setAttribute("src", "../assets/image/ubiwhite.svg");
+        imgubicacion.setAttribute("src", "assets/image/ubiwhite.svg");
 
       }
 
@@ -198,11 +198,11 @@ const loadpage = async (x,y) => {
       const imgpublicacion = document.createElement("img");
       imgpublicacion.classList.add("cont_works__trabajo__info2__logo");
       if(modo==0){
-        imgpublicacion.setAttribute("src", "../assets/image/tiempoblack.svg");
+        imgpublicacion.setAttribute("src", "assets/image/tiempoblack.svg");
 
       }
       else{
-       imgpublicacion.setAttribute("src", "../assets/image/tiempowhite.svg");
+       imgpublicacion.setAttribute("src", "assets/image/tiempowhite.svg");
 
       }
 
@@ -405,7 +405,7 @@ const buscador = async (x) => {
 
       const imgubicacion = document.createElement("img");
       imgubicacion.classList.add("cont_works__trabajo__info2__logo");
-      imgubicacion.setAttribute("src", "../assets/image/ubiblack.svg");
+      imgubicacion.setAttribute("src", "assets/image/ubiblack.svg");
 
       const txtubicacion = document.createElement("p");
       txtubicacion.classList.add("cont_works__trabajo__info2__txt");
@@ -414,7 +414,7 @@ const buscador = async (x) => {
 
       const imgpublicacion = document.createElement("img");
       imgpublicacion.classList.add("cont_works__trabajo__info2__logo");
-      imgpublicacion.setAttribute("src", "../assets/image/tiempoblack.svg");
+      imgpublicacion.setAttribute("src", "assets/image/tiempoblack.svg");
 
       const txtpublicacion = document.createElement("p");
       txtpublicacion.classList.add("cont_works__trabajo__info2__txt");
@@ -547,7 +547,7 @@ const trabajosfulltime = async (x) => {
 
       const imgubicacion = document.createElement("img");
       imgubicacion.classList.add("cont_works__trabajo__info2__logo");
-      imgubicacion.setAttribute("src", "../assets/image/ubiblack.svg");
+      imgubicacion.setAttribute("src", "assets/image/ubiblack.svg");
 
       const txtubicacion = document.createElement("p");
       txtubicacion.classList.add("cont_works__trabajo__info2__txt");
@@ -556,7 +556,7 @@ const trabajosfulltime = async (x) => {
 
       const imgpublicacion = document.createElement("img");
       imgpublicacion.classList.add("cont_works__trabajo__info2__logo");
-      imgpublicacion.setAttribute("src", "../assets/image/tiempoblack.svg");
+      imgpublicacion.setAttribute("src", "assets/image/tiempoblack.svg");
 
       const txtpublicacion = document.createElement("p");
       txtpublicacion.classList.add("cont_works__trabajo__info2__txt");
@@ -764,7 +764,7 @@ const queryubicaciones = async (ubi, nom) => {
 
       const imgubicacion = document.createElement("img");
       imgubicacion.classList.add("cont_works__trabajo__info2__logo");
-      imgubicacion.setAttribute("src", "../assets/image/ubiblack.svg");
+      imgubicacion.setAttribute("src", "assets/image/ubiblack.svg");
 
       const txtubicacion = document.createElement("p");
       txtubicacion.classList.add("cont_works__trabajo__info2__txt");
@@ -773,7 +773,7 @@ const queryubicaciones = async (ubi, nom) => {
 
       const imgpublicacion = document.createElement("img");
       imgpublicacion.classList.add("cont_works__trabajo__info2__logo");
-      imgpublicacion.setAttribute("src", "../assets/image/tiempoblack.svg");
+      imgpublicacion.setAttribute("src", "assets/image/tiempoblack.svg");
 
       const txtpublicacion = document.createElement("p");
       txtpublicacion.classList.add("cont_works__trabajo__info2__txt");
