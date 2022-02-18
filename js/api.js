@@ -139,10 +139,12 @@ const loadpage = async (x,y) => {
     console.log(location)
     const titulo = document.createElement("a")
     let url = new URL(location.href.replace('index','descripcion'))
+    
 
     // probar como argumento esto->location.href+'/descripcion.html'
     url.searchParams.set('id',work.id)
-    titulo.href = url;
+    console.log(url.href)
+    titulo.href = url.href;
     titulo.classList.add('cont_works__trabajo__info1__texto__cargo')
     titulo.id = "linkCargo";
     titulo.textContent = work.title
