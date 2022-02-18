@@ -4,7 +4,7 @@ fetch("https://remotive.io/api/remote-jobs?job_type=full_time")
   .then((res) => res.json())
   .then((res) => {
     let lugares = [];
-    console.log(res.jobs);
+    console.log(res.jobs.length);
     // debugger;
     for (let job of res.jobs) {
       // let result = data.filter((item,index)=>{
@@ -28,16 +28,67 @@ axios({
 //https://remotive.io/api/remote-jobs?jobs-type=full_time
 //para buscar trabajos solo full time
 
-const loadpage = async () => {
-  // debbuger
+
+
+// vbles de paginacion
+let pagini=0
+let pagtop=5
+
+const pagatras=document.getElementById('pagatras')
+const pag1=document.getElementById('pag1')
+const pag2=document.getElementById('pag2')
+const pag3=document.getElementById('pag3')
+const pagsgte=document.getElementById('pagsgte')
+const paginicio=document.getElementById('paginicio')
+const pagfin=document.getElementById('pagfin')
+// 
+
+const loadpage = async (x,y) => {
+  // debbtop
   try {
-    let res = await fetch("https://remotive.io/api/remote-jobs?limit=5");
+
+    if(x==undefined&&y==undefined){
+      pagini=0
+      pagtop=5
+      x=pagini
+      y=pagtop
+      pag1.textContent=1
+      pag2.textContent=2
+      pag3.textContent=3
+    }
+    else if(x<=0){
+      pagini+=5
+      pagtop+=5
+      // debugger;
+      x=pagini
+      y=pagtop
+    }
+    
+    let res = await fetch("https://remotive.io/api/remote-jobs");
     let datos = await res.json();
     let jobs = await datos.jobs;
     console.log(datos.jobs);
     console.log("dea");
+    if(y==-1){
+        pagini=jobs.length-6
+        pagtop=jobs.length-1
+        x=pagini
+        y=pagtop
+        let z=Math.round((jobs.length/5))
+        pag1.textContent=z-2
+        pag2.textContent=z-1
+        pag3.textContent=z
+    }
     const fragmento = document.createDocumentFragment();
-    for (const work of jobs) {
+    if(pagtop*5>jobs.length){
+      pagini-=5
+      pagtop-=5
+      x=pagini
+      y=pagtop
+    }
+    for(let i=x;i<y;i++){
+      work=jobs[i]
+    // for (const work of jobs) {
       // calculo de diferencia de fechas
       let fecha_actual = new Date().getTime();
       const fecha = new Date(work.publication_date).getTime();
@@ -84,10 +135,12 @@ const loadpage = async () => {
 //   // parrafo con el cargo
     // --------------------------------------------------------------------------------
 
-    console.log(window.location.href)
+    console.log(window.location.href,location.href.replace('index','descripcion'))
     console.log(location)
     const titulo = document.createElement("a")
     let url = new URL(location.href.replace('index','descripcion'))
+
+    // probar como argumento esto->location.href+'/descripcion.html'
     url.searchParams.set('id',work.id)
     titulo.href = url;
     titulo.classList.add('cont_works__trabajo__info1__texto__cargo')
@@ -129,7 +182,13 @@ const loadpage = async () => {
 
       const imgubicacion = document.createElement("img");
       imgubicacion.classList.add("cont_works__trabajo__info2__logo");
-      imgubicacion.setAttribute("src", "../assets/image/ubiblack.svg");
+      if(modo==0){
+        imgubicacion.setAttribute("src", "../assets/image/ubiblack.svg");
+
+      }else{
+        imgubicacion.setAttribute("src", "../assets/image/ubiwhite.svg");
+
+      }
 
       const txtubicacion = document.createElement("p");
       txtubicacion.classList.add("cont_works__trabajo__info2__txt");
@@ -138,7 +197,14 @@ const loadpage = async () => {
 
       const imgpublicacion = document.createElement("img");
       imgpublicacion.classList.add("cont_works__trabajo__info2__logo");
-      imgpublicacion.setAttribute("src", "../assets/image/tiempoblack.svg");
+      if(modo==0){
+        imgpublicacion.setAttribute("src", "../assets/image/tiempoblack.svg");
+
+      }
+      else{
+       imgpublicacion.setAttribute("src", "../assets/image/tiempowhite.svg");
+
+      }
 
       const txtpublicacion = document.createElement("p");
       txtpublicacion.classList.add("cont_works__trabajo__info2__txt");
@@ -153,11 +219,96 @@ const loadpage = async () => {
       fragmento.appendChild(cont_works__trabajo);
     }
     main.appendChild(fragmento);
+    if(modo!=0)funcion_btnswitch()
+
   } catch (error) {
     console.log(error);
   }
-};
+}
 loadpage();
+
+
+
+// paginacion
+pagatras.addEventListener('click',()=>{
+  pagini-=5
+  pagtop-=5
+  if(pagini>=0){
+    // debugger;
+    pag1.textContent=parseInt(pag1.textContent)-1
+    pag2.textContent=parseInt(pag2.textContent)-1
+    pag3.textContent=parseInt(pag3.textContent)-1
+  }
+  else{
+    // debugger;
+    pag1.textContent=1
+    pag2.textContent=2
+    pag3.textContent=3 
+  }
+  
+  borrarhijosmain()
+  loadpage(pagini,pagtop)
+})
+
+pagsgte.addEventListener('click',()=>{
+  pagini+=5
+  pagtop+=5
+  pag1.textContent=parseInt(pag1.textContent)+1
+    pag2.textContent=parseInt(pag2.textContent)+1
+    pag3.textContent=parseInt(pag3.textContent)+1
+  borrarhijosmain()
+  loadpage(pagini,pagtop)
+})
+
+pag1.addEventListener('click',()=>{
+  pagini=(parseInt(pag1.textContent)-1)*5-5
+  pagtop=pagini+5
+  if(parseInt(pag1.textContent)!=1){
+    pag1.textContent=(parseInt(pag1.textContent)-1)
+    pag2.textContent=parseInt(pag2.textContent)-1
+    pag3.textContent=parseInt(pag3.textContent)-1
+  }
+  
+  borrarhijosmain()
+  loadpage(pagini,pagtop)
+
+})
+
+pag2.addEventListener('click',()=>{
+  pagini=(parseInt(pag2.textContent)-1)*5
+  pagtop=pagini+5
+  pag1.textContent=pag2.textContent
+  pag2.textContent=parseInt(pag2.textContent)+1
+  pag3.textContent=parseInt(pag3.textContent)+1
+  borrarhijosmain()
+  loadpage(pagini,pagtop)
+
+})
+pag3.addEventListener('click',()=>{
+  pagini=(parseInt(pag3.textContent)-1)*5
+  pagtop=pagini+5
+  pag1.textContent=pag3.textContent
+  pag2.textContent=parseInt(pag3.textContent)+1
+  pag3.textContent=parseInt(pag3.textContent)+2
+  borrarhijosmain()
+  loadpage(pagini,pagtop)
+
+})
+
+paginicio.addEventListener('click',()=>{
+  borrarhijosmain()
+  loadpage()
+})
+pagfin.addEventListener('click',()=>{
+  
+  borrarhijosmain()
+  loadpage(1,-1)
+})
+
+
+// --------
+
+
 
 const buscador = async (x) => {
   try {
@@ -281,6 +432,7 @@ const buscador = async (x) => {
   } catch (error) {
     console.log(error);
   }
+
 };
 
 const borrarhijosmain = () => {

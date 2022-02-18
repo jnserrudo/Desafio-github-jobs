@@ -20,6 +20,7 @@ const loadpage = async () => {
             return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
         }
         let Id = getParameterByName('id');
+        console.log(location)
         console.log(Id)
 
         let res = await fetch(`https://remotive.io/api/remote-jobs?category=software-dev`)

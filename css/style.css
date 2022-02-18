@@ -304,11 +304,7 @@ estilo del enlace para los titulos de los cargos de los trabajos
     font-size: 2.2rem;
 }
 
-
-
-
 /* ---------------------- */
-
 
 .cont_works__trabajo__info2{
     display: flex;
@@ -331,7 +327,7 @@ estilo del enlace para los titulos de los cargos de los trabajos
 .cont_works__trabajo__info2__logo{
     /* margin-bottom: 5px; */
     margin-bottom: 5%;
-    fill: var(--grisClaro);
+    color: var(--grisClaro);
 }
 
 .cont_works__trabajo__info1__texto__nomempresa{
@@ -361,7 +357,8 @@ estilo del enlace para los titulos de los cargos de los trabajos
     justify-content: flex-end;
 }
 .paginacion_pags{
-    padding-top: 1.4%;
+    font-size: 1.5rem;
+    padding-top: 0.5rem;
     margin: 0 0.5rem;
     height: 3rem;
     width: 3rem;
@@ -369,7 +366,7 @@ estilo del enlace para los titulos de los cargos de los trabajos
     border-radius: 0.5rem;
     cursor: pointer;
     justify-content: center;
-    align-items: center;
+    align-content: center;
     text-align: center;
 
 }
@@ -645,7 +642,15 @@ estilo del enlace para los titulos de los cargos de los trabajos
     border: 1px solid var(--blanco);
     
 }
+.cont_works__trabajo__info2__logo--dark{
+    color: #f1f1f1;
+}
 .cont_works__trabajo__info2--dark{
     color: var(--blanco);
+}
 
+.paginacion_pags--dark .paginacion_pags{
+    background-color: #0c89f2;
+    color: var(--blanco);
+    font-weight: 500;
 }
