@@ -138,7 +138,15 @@ const loadpage = async (x,y) => {
     console.log(window.location.href,location.href.replace('index','descripcion'))
     console.log(location)
     const titulo = document.createElement("a")
-    let url = new URL(location.href.replace('index','descripcion'))
+    let url
+    if(location.href.includes('index')){
+      url = new URL(location.href.replace('index','descripcion'))
+
+    }
+    else{
+      url = new URL(location.href+'/descripcion.html')
+    }
+    console.log(location.href+'/descripcion.html')
     
 
     // probar como argumento esto->location.href+'/descripcion.html'
